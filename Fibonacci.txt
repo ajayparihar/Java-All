@@ -1,0 +1,25 @@
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		// Input
+		Scanner scan = new Scanner(System.in);
+		int num = scan.nextInt();
+		// Calculate 
+		int result = calculateFibonaci(num);
+		// Output
+		System.out.print(result);
+	}
+
+	private static int calculateFibonaci(int n) {
+		// Base Case
+		if (n == 1 || n == 2) {
+			return 1;
+		}
+		// Recursion
+		return calculateFibonaci(n - 1) + calculateFibonaci(n - 2);
+	}
+
+}
