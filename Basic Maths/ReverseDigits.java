@@ -5,7 +5,7 @@ public class ReverseDigits {
 
     public static void main(String[] args) {
 
-        int num = 12345;
+        int num = 12300;
 
         int result = revDigit(num);
         System.out.println(result);
