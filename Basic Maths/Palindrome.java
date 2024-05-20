@@ -1,37 +1,36 @@
-import java.util.Scanner;
-
-public class Palindrome {
-
+class Palindrome {
     public static void main(String[] args) {
-
-        Scanner scan = new Scanner(System.in);
-        int num = scan.nextInt();
-        int temp = num;
-
-        if (revOfNumber(num) == temp) { // comparison B/W reverse of "num" and "num"
-
-            System.out.println(temp + " is Palindrome");
-        }
-
-        else {
-
-            System.out.println(temp + " is NOT Palindrome");
-        }
-
-        scan.close();
+        int x = 3;
+        System.out.println(isPalindrome(x));
     }
 
-    static int revOfNumber(int num) { // reverse of a number
+    public static boolean isPalindrome(int x) {
 
-        int rev = 0;
+        int temp = x;
 
-        while (num > 0) {
-            int mod = num % 10;
-            rev = (rev * 10) + mod;
-            num = num / 10;
+        if (x < 0) { // False when x is negative.
+            return false;
         }
 
-        return rev;
+        if (temp == reverse(x)) { // if initial value of x is equal to the reverse(x)- True.
+            return true;
+        }
+        return false; // class is boolean, output is either True or False.
+
     }
 
+    static int reverse(int x) { // Same reverse logic is explained in "ReverseDigit.java" File.
+
+        double rev = 0;
+        while (x > 0) {
+            int rem = x % 10;
+            rev = (rev * 10) + rem;
+            boolean overflow = rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE;
+            if (overflow) {
+                return 0;
+            }
+            x = x / 10;
+        }
+        return (int) rev;
+    }
 }
