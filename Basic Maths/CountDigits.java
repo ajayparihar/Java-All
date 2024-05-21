@@ -27,8 +27,8 @@ public class CountDigits {
 
     }
 
-    static int digitCountByLog10(int num) {]
-        
+    static int digitCountByLog10(int num) {
+
         int count = (int) (Math.log10(num) + 1);
 
         return count;
