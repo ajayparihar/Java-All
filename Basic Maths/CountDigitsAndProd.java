@@ -7,10 +7,6 @@ public class CountDigitsAndProd {
     }
 
     static int evenlyDivides(int N) {
-        return remZero(N);
-    }
-
-    static int remZero(int N) {
 
         int temp = N;
         int flag = 0;
@@ -23,7 +19,6 @@ public class CountDigitsAndProd {
             }
             N = N / 10; // Divide N by 10 to remove the last no and so on...
         }
-
         return flag;
     }
 }
