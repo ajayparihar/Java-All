@@ -1,24 +1,39 @@
 public class CountDigitsAndProd {
     public static void main(String[] args) {
-
+        // Define an integer N to count digits that evenly divide N
         int N = 22074;
-        int result = evenlyDivides(N);
+
+        // Call the evenlyDivides method and store the result
+        int result = isEvenlyDivides(N);
+
+        // Print the result
         System.out.println(result);
     }
 
-    static int evenlyDivides(int N) {
-
+    // Method to count the number of digits in N that evenly divide N
+    static int isEvenlyDivides(int N) {
+        // Store the original number in a temporary variable
         int temp = N;
+
+        // Initialize a counter to count the digits that evenly divide N
         int flag = 0;
 
+        // Loop to process each digit of N
         while (N > 0) {
-            int rem = N % 10; // Last digit of N
-            // System.out.println("rem " + rem);
-            if ((rem != 0) && (temp % rem) == 0) { // if rem of temp(N) is 0
-                flag++; // add 1 to the flag
+            // Get the last digit of N
+            int rem = N % 10;
+
+            // Check if the digit is not zero and if it evenly divides the original number
+            if ((rem != 0) && (temp % rem) == 0) {
+                // Increment the counter if the condition is met
+                flag++;
             }
-            N = N / 10; // Divide N by 10 to remove the last no and so on...
+
+            // Remove the last digit from N
+            N = N / 10;
         }
+
+        // Return the count of digits that evenly divide the original number
         return flag;
     }
 }
