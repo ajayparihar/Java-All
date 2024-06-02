@@ -1,48 +1,52 @@
 class ReverseDigits {
 
     public static void main(String[] args) {
+        // Call the reverse method with an integer value that causes overflow
+        int result = reverse(1534236469);
 
-        int result = reverse(1534236469); // Int overflow value
+        // Print the result
         System.out.println(result);
     }
 
+    // Method to reverse the digits of an integer
     public static int reverse(int x) {
-
         int rev = 0;
 
-        if (x <= 0) { // When x is Negative
-            rev = revClass(x);
+        // Check if the number is negative
+        if (x < 0) {
+            // Reverse the digits and return the negative result
+            rev = reverseDigits(Math.abs(x));
             return -rev;
-        } else { // When x is Positive
-            rev = revClass(x);
+        } else {
+            // Reverse the digits and return the positive result
+            rev = reverseDigits(x);
             return rev;
         }
     }
 
-    static int revClass(int x) {
-
-        x = Math.abs(x); // Absolute value of x (ie, Positive)
+    // Helper method to reverse the digits of a positive integer
+    static int reverseDigits(int x) {
+        // Use a double to store the reversed value to detect overflow
         double rev = 0;
-        /**
-         * rev is doubled because, to measure the overflow we need the bigger container.
-         * Can't measure it inside int.
-         */
 
+        // Loop to reverse the digits of x
         while (x > 0) {
+            // Extract the last digit of x
             int temp = x % 10;
-            rev = (rev * 10) + temp;
-            boolean overflow = rev > Integer.MAX_VALUE || rev < Integer.MIN_VALUE;
-            /**
-             * checking when rev is overflowing.
-             * will stop the iteration once it overflows.
-             * Thats why it is placed here instead of at the place of return.
-             */
 
-            if (overflow) { // when overflow is == true, return 0.
+            // Update rev by shifting existing digits left and adding the new digit
+            rev = (rev * 10) + temp;
+
+            // Check for overflow by comparing rev to Integer.MAX_VALUE
+            if (rev > Integer.MAX_VALUE) {
                 return 0;
             }
+
+            // Remove the last digit from x
             x = x / 10;
         }
-        return (int) rev; // need to convert back to int from double.
+
+        // Convert rev back to int from double and return it
+        return (int) rev;
     }
 }
