@@ -1,7 +1,5 @@
 package Arrays;
 
-import java.util.Arrays;
-
 public class SecondLargestElement {
     public static void main(String[] args) {
         int[] arr = { 1, 51, 89, 25, 8, 4 };
@@ -12,19 +10,19 @@ public class SecondLargestElement {
 
     static int secLargestElement(int[] arr, int n) {
         if (n > 1) {
-            int first = Integer.MIN_VALUE;
-            int second = Integer.MIN_VALUE;
-            for (int i = 0; i < n; i++) {
-                if (arr[i] > first) {
-                    second = first;
-                    first = arr[i];
-                }
-
-                else if (arr[i] > second && arr[i] != first) {
-                    second = arr[i];
+            int big = 0;
+            int secBig = -1;
+            for (int i = 0; i < n; i++) { // biggest in array
+                if (arr[i] > big) {
+                    big = arr[i];
                 }
             }
-            return second;
+            for (int i = 0; i < n; i++) {
+                if (arr[i] > secBig && arr[i] != big) { // Biggest in array accept "big"
+                    secBig = arr[i];
+                }
+            }
+            return secBig;
             // Arrays.sort(arr);
             // return arr[arr.length - 2];
         }
