@@ -1,6 +1,6 @@
 public class ReverseString {
     public static void main(String[] args) {
-        String str = "0P";
+        String str = "Aja";
         System.out.println(isPalindrome(str));
 
     }
