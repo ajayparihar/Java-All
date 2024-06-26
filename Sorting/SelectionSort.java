@@ -20,10 +20,14 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
+            swap(minIndex, i, arr);
         }
 
+    }
+
+    static void swap(int minIndex, int i, int[] arr) {
+        int temp = arr[minIndex];
+        arr[minIndex] = arr[i];
+        arr[i] = temp;
     }
 }
