@@ -7,13 +7,16 @@ public class MissingNumber {
     }
 
     static int missingNumber(int[] nums) {
-        int numsLength = nums.length;
-        int expectedSum = numsLength * (numsLength + 1) / 2;
+        int size = nums.length;
+        int expectedSum = size * (size + 1) / 2;
         int sum = 0;
-        for (int i : nums) {
-            sum += i;
+
+        for (int num : nums) {
+            sum += num;
         }
-        int missingNum = expectedSum - sum;
-        return missingNum;
+
+        int missingNumber = expectedSum - sum;
+
+        return missingNumber;
     }
 }

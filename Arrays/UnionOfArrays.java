@@ -15,17 +15,17 @@ public class UnionOfArrays {
     }
 
     static ArrayList<Integer> unionOfArrays(int[] arr1, int[] arr2) {
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> unionSet = new HashSet<>();
 
-        for (int i : arr1) {
-            set.add(i);
+        for (int elementOfArr1 : arr1) {
+            unionSet.add(elementOfArr1);
         }
 
-        for (int i : arr2) {
-            set.add(i);
+        for (int elementOfArr2 : arr2) {
+            unionSet.add(elementOfArr2);
         }
 
-        List<Integer> resultList = new ArrayList<>(set);
+        List<Integer> resultList = new ArrayList<>(unionSet);
         Collections.sort(resultList);
 
         return new ArrayList<>(resultList);
