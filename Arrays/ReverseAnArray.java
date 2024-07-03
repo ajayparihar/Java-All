@@ -1,23 +1,43 @@
 package Arrays;
 
+import java.util.*;
+
 public class ReverseAnArray {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 5, 6 };
-        reverseArray(arr);
+        int start = 0;
+        int end = 2;
+        revArrayCollection(arr);
+        reverseArray(arr, start, end);
 
         for (int i : arr) {
             System.out.print(i + " ");
         }
     }
 
-    static void reverseArray(int[] arr) {
-        int size = arr.length;
+    static void reverseArray(int[] arr, int start, int end) {
 
-        for (int i = 0; i < size / 2; i++) { // we need half of the size (sec half is replaced by first half)
-            int temp = arr[size - 1 - i]; // size - 1 is last item
-            arr[size - 1 - i] = arr[i];
+        for (int i = start; i < end - 1; i++) {
+            int temp = arr[end - i];
+            arr[end - i] = arr[i];
             arr[i] = temp;
         }
+    }
+
+    static void revArrayCollection(int[] arr) {
+
+        List<Integer> arrList = new ArrayList<>();
+
+        for (int i : arr) {
+            arrList.add(i);
+        }
+
+        Collections.reverse(arrList);
+        System.out.println(" Collections.Reverse");
+        for (int i : arrList) {
+            System.out.print(i + " ");
+        }
+        System.out.println("");
     }
 
 }
