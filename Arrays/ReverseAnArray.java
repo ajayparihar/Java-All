@@ -31,7 +31,6 @@ public class ReverseAnArray {
         for (int i : arr) {
             arrList.add(i);
         }
-
         Collections.reverse(arrList);
         System.out.println(" Collections.Reverse");
         for (int i : arrList) {
@@ -39,5 +38,4 @@ public class ReverseAnArray {
         }
         System.out.println("");
     }
-
 }
