@@ -2,34 +2,40 @@ package Arrays;
 
 public class RotateWithoutReverse {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 5, 6 };
+        int[] nums = { 1, 2, 3, 4, 5, 6 };
         int k = 3;
-        rotateArray(arr, k);
+        rotateArray(nums, k);
 
-        for (int i : arr) {
+        for (int i : nums) {
             System.out.print(i + " ");
         }
     }
 
-    static void rotateArray(int[] arr, int k) {
-        int n = arr.length;
-        k = k % n;
+    static void rotateArray(int[] nums, int k) {
+        int size = nums.length;
+        k = k % size;
 
         if (k == 0)
             return;
 
+        // Save temp
+
         int[] temp = new int[k];
 
-        for (int i = 0; i < k; i++) { // add last k elements to temp
-            temp[i] = arr[n - k + i];
+        for (int i = 0; i < k; i++) {
+            temp[i] = nums[size - k + i];
         }
 
-        for (int i = n - 1; i >= k; i--) {
-            arr[i] = arr[i - k];
+        // Scoot
+
+        for (int i = size - 1; i >= k; i--) {
+            nums[i] = nums[i - k];
         }
 
-        for (int i = 0; i < k; i++) { // add last temp elements to starting of arr
-            arr[i] = temp[i];
+        // add temp
+
+        for (int i = 0; i < k; i++) {
+            nums[i] = temp[i];
         }
     }
 }
