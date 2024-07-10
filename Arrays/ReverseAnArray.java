@@ -16,11 +16,10 @@ public class ReverseAnArray {
     }
 
     static void reversenumsay(int[] nums, int start, int end) {
-
         while (start < end) {
-            int temp = nums[end];
-            nums[end] = nums[start];
-            nums[start] = temp;
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
 
             start++;
             end--;
@@ -29,16 +28,15 @@ public class ReverseAnArray {
 
     static void revnumsayCollection(int[] nums) {
 
-        List<Integer> numsList = new ArrayList<>();
+        List<Integer> revNum = new ArrayList<>();
 
-        for (int i : nums) {
-            numsList.add(i);
+        for (int num : nums) {
+            revNum.add(num);
         }
-        Collections.reverse(numsList);
-        System.out.println(" Collections.Reverse");
-        for (int i : numsList) {
-            System.out.print(i + " ");
+        Collections.reverse(revNum);
+        System.out.println(revNum);
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = revNum.get(i);
         }
-        System.out.println("");
     }
 }
