@@ -12,6 +12,9 @@ public class SecondLargestElement {
         int maxNum = Integer.MIN_VALUE;
         int secMaxNum = Integer.MIN_VALUE;
 
+        if (arr.length < 2)
+            return -1;
+
         for (int num : arr) {
             if (num > maxNum) {
                 secMaxNum = maxNum;
