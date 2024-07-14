@@ -9,23 +9,15 @@ public class SecondLargestElement {
     }
 
     static int secLargestElement(int[] arr, int n) {
-        if (n > 1) {
-            int big = 0;
-            int secBig = -1;
-            for (int i = 0; i < n; i++) { // biggest in array
-                if (arr[i] > big) {
-                    big = arr[i];
-                }
+        int maxNum = 0;
+        int secMaxNum = 0;
+
+        for (int num : arr) {
+            if (num > maxNum) {
+                secMaxNum = maxNum;
+                maxNum = num;
             }
-            for (int i = 0; i < n; i++) {
-                if (arr[i] > secBig && arr[i] != big) { // Biggest in array accept "big"
-                    secBig = arr[i];
-                }
-            }
-            return secBig;
-            // Arrays.sort(arr);
-            // return arr[arr.length - 2];
         }
-        return -1;
+        return secMaxNum;
     }
 }
