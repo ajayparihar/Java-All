@@ -9,13 +9,15 @@ public class SecondLargestElement {
     }
 
     static int secLargestElement(int[] arr, int n) {
-        int maxNum = 0;
-        int secMaxNum = 0;
+        int maxNum = Integer.MIN_VALUE;
+        int secMaxNum = Integer.MIN_VALUE;
 
         for (int num : arr) {
             if (num > maxNum) {
                 secMaxNum = maxNum;
                 maxNum = num;
+            } else if (num > secMaxNum && num != maxNum) {
+                secMaxNum = num;
             }
         }
         return secMaxNum;
