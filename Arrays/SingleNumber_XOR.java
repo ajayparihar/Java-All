@@ -7,9 +7,9 @@ public class SingleNumber_XOR {
     }
 
     static int singleNum(int[] nums) {
-        int result = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            result ^= nums[i];
+        int result = 0;
+        for (int num : nums) {
+            result ^= num;
         }
         return result;
     }
