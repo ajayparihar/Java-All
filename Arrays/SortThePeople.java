@@ -19,9 +19,7 @@ public class SortThePeople {
         for (int i = 0; i < size; i++) {
             heightsAndNamesMap.put(heights[i], names[i]);
         }
-
         Arrays.sort(heights);
-
         String[] sortedNames = new String[size];
 
         for (int i = 0; i < size; i++) {
