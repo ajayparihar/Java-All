@@ -1,6 +1,7 @@
 package Arrays;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArrayLeaders {
     public static void main(String[] args) {
@@ -27,6 +28,7 @@ public class ArrayLeaders {
                 leadersList.add(leader);
             }
         }
+        Collections.reverse(leadersList);
         return leadersList;
     }
 }
