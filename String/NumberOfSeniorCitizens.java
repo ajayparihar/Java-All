@@ -14,11 +14,13 @@ public class NumberOfSeniorCitizens {
 
         for (String str : details) {
             int age = Integer.parseInt(str.substring(11, 13));
-
-            if (age > 60) {
+            if (isSeniorCitizen(age))
                 count++;
-            }
         }
         return count;
+    }
+
+    static boolean isSeniorCitizen(int age) {
+        return (age > 60);
     }
 }

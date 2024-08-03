@@ -14,8 +14,9 @@ public class ArrayLeaders {
     static ArrayList<Integer> findLeaders(int[] arr, int n) {
         ArrayList<Integer> leadersList = new ArrayList<>();
 
-        if (n == 0)
+        if (n == 0) {
             return leadersList;
+        }
 
         int leader = arr[n - 1];
         leadersList.add(leader);
