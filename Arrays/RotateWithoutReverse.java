@@ -2,7 +2,7 @@ package Arrays;
 
 public class RotateWithoutReverse {
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 5, 6 };
+        int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
         int k = 3;
         rotateArray(nums, k);
 
@@ -14,28 +14,23 @@ public class RotateWithoutReverse {
     static void rotateArray(int[] nums, int k) {
         int size = nums.length;
         k = k % size;
+        int splitIndex = size - k;
 
         if (k == 0)
             return;
 
-        // Save temp
+        int[] tempArray = new int[splitIndex];
 
-        int[] temp = new int[k];
-
-        for (int i = 0; i < k; i++) {
-            temp[i] = nums[size - k + i];
+        for (int i = 0; i < splitIndex; i++) {
+            tempArray[i] = nums[i];
         }
 
-        // Scoot
-
-        for (int i = size - 1; i >= k; i--) {
-            nums[i] = nums[i - k];
+        for (int i = 0; i < k; i++) {
+            nums[i] = nums[splitIndex + i];
         }
 
-        // add temp
-
-        for (int i = 0; i < k; i++) {
-            nums[i] = temp[i];
+        for (int i = 0; i < splitIndex; i++) {
+            nums[k + i] = tempArray[i];
         }
     }
 }
