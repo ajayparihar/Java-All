@@ -29,6 +29,6 @@ public class RangeSumOfSortedSubarraySums {
         for (int i = left - 1; i < right; i++) {
             totalSum = (totalSum + subarraySums.get(i)) % MOD;
         }
-        return (int) totalSum;
+        return totalSum;
     }
 }
