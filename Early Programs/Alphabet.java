@@ -9,6 +9,7 @@ public class Alphabet {
 
 		int result = checkAlphabet(str.charAt(0));
 		System.out.println(result);
+		scan.close();
 	}
 
 	public static int checkAlphabet(char ch) {

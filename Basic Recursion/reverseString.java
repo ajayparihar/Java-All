@@ -1,4 +1,4 @@
-public class reverseString {
+public class ReverseString {
     public static void main(String[] args) {
         String name = "0P";
         System.out.println(isPalindrome(name));

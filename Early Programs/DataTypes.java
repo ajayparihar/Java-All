@@ -1,16 +1,18 @@
 import java.util.Scanner;
 
-public class Datatypes {
+public class DataTypes {
 
-	public static void main(String [] args){
+	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String str = sc.nextLine();
-
-	public static String checkSize(char ch) {
-			if(ch == "I" || ch == "i"){
-				return 4; 
-
-}
+		char str = sc.nextLine().charAt(0);
+		System.out.println(checkSize(str));
+		sc.close();
 	}
-}
+
+	public static int checkSize(char ch) {
+		if (ch == 'I' || ch == 'i') {
+			return 4;
+		}
+		return -1;
+	}
 }

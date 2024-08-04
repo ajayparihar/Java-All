@@ -8,6 +8,7 @@ public class Solution {
 
         int result = dataTypes(str.toLowerCase());
         System.out.println(result);
+        sc.close();
     }
 
     public static int dataTypes(String type) {

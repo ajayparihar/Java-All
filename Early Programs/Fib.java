@@ -8,6 +8,7 @@ public class Fib {
         int num = scan.nextInt();
         // Calculate
         int result = 0;
+        scan.close();
 
         while (num >= 1) {
             result = (result - 1) + (result - 2);
