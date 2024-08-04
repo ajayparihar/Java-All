@@ -25,10 +25,10 @@ public class RangeSumOfSortedSubarraySums {
 
         Collections.sort(subarraySums);
 
-        int sum = 0;
+        int totalSum = 0;
         for (int i = left - 1; i < right; i++) {
-            sum = (sum + subarraySums.get(i)) % MOD;
+            totalSum = (totalSum + subarraySums.get(i)) % MOD;
         }
-        return (int) sum;
+        return (int) totalSum;
     }
 }
