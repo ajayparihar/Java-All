@@ -9,13 +9,13 @@ public class MinimumNumberOfPushesToTypeWord2_FrequencyArray {
     }
 
     static int minimumPushes(String word) {
-        int[] frequencyArray = new int[26];
 
+        int[] frequencyArray = new int[26];
         for (char ch : word.toCharArray()) {
             frequencyArray[ch - 'a']++;
         }
-        Integer[] sortedFrequency = new Integer[26];
 
+        Integer[] sortedFrequency = new Integer[26];
         for (int i = 0; i < 26; i++) {
             sortedFrequency[i] = frequencyArray[i];
         }
