@@ -10,7 +10,7 @@ class Test2 {
             int mini = min % i;
             int maxi = max % i;
             if ((mini == 0) && (maxi == 0)) {
-                System.out.println(j);
+                System.out.println(i);
                 break;
             }
         }
