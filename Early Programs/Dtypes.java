@@ -8,6 +8,8 @@ public class Dtypes {
 
         int result = dataTypes(str.charAt(0));
         System.out.println(result);
+
+        sc.close();
     }
 
     public static int dataTypes(char ch) {
