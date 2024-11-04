@@ -1,4 +1,4 @@
-public class AddTwoNumbersLinkedList {
+public class AddTwoNumbers_Linked_List {
     public static void main(String[] args) {
         // Create first number: 2 -> 4 -> 3 (represents 342)
         LinkedListHelper.ListNode l1 = new LinkedListHelper.ListNode(2);
