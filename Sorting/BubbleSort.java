@@ -32,7 +32,6 @@ public class BubbleSort {
         int secondElement = i + 1;
 
         int temp = arr[firstElement];
-
         arr[firstElement] = arr[secondElement];
         arr[secondElement] = temp;
     }
