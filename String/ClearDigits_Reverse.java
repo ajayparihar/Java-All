@@ -4,7 +4,7 @@ public class ClearDigits_Reverse {
 
     public static void main(String[] args) {
         // Sample input string
-        String input = "abc123xyz45";
+        String input = "abc";
         
         // Call the function to clear digits and reverse the string
         System.out.println(clearDigits(input));
