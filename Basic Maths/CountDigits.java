@@ -20,6 +20,13 @@ public class CountDigits {
 
     }
 
+    /**
+     * Counts digits in a number by converting it to string
+     * @param num The number to count digits of
+     * @return The number of digits
+     * Time Complexity: O(log num) for integer to string conversion
+     * Space Complexity: O(log num) for storing the string representation
+     */
     static int digitCountByConversion(int num) {
 
         String len = Integer.toString(num); // integer gets converted to string
@@ -27,6 +34,13 @@ public class CountDigits {
 
     }
 
+    /**
+     * Counts digits in a number using logarithm
+     * @param num The number to count digits of
+     * @return The number of digits
+     * Time Complexity: O(1) as Math.log10 is constant time
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static int digitCountByLog10(int num) {
 
         int count = (int) (Math.log10(num) + 1);

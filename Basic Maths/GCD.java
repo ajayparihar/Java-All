@@ -10,6 +10,14 @@ public class GCD {
         System.out.println(result);
     }
 
+    /**
+     * Calculates the Greatest Common Divisor (GCD) of two numbers using Euclidean algorithm
+     * @param num1 First number
+     * @param num2 Second number
+     * @return GCD of num1 and num2
+     * Time Complexity: O(log(min(num1,num2))) using Euclidean algorithm
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static int gcdOf2Numbers(int num1, int num2) {
 
         while (num1 > 0 && num2 > 0) {

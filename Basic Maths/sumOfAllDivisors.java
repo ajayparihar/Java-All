@@ -7,7 +7,13 @@ public class sumOfAllDivisors {
         System.out.println(sumOfDivisors(N));
     }
 
-    // Method to calculate the sum of all divisors of N
+    /**
+     * Calculates the sum of all divisors of N
+     * @param N The number to find sum of divisors for
+     * @return The sum of all divisors of N
+     * Time Complexity: O(N) where N is the input number
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static long sumOfDivisors(int N) {
         // Initialize the sum to 0
         long sum = 0;

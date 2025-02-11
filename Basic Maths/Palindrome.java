@@ -4,6 +4,13 @@ class Palindrome {
         System.out.println(isPalindrome(x));
     }
 
+    /**
+     * Checks if a number is palindrome by comparing it with its reverse
+     * @param x The number to check
+     * @return true if the number is palindrome, false otherwise
+     * Time Complexity: O(log x) where x is the input number, as we process each digit
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     public static boolean isPalindrome(int x) {
 
         int temp = x;
@@ -19,6 +26,13 @@ class Palindrome {
 
     }
 
+    /**
+     * Reverses the digits of a number with overflow check
+     * @param x The number to reverse
+     * @return The reversed number, or 0 if overflow occurs
+     * Time Complexity: O(log x) where x is the input number, as we process each digit
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static int reverse(int x) { // Same reverse logic is explained in "ReverseDigit.java" File.
 
         double rev = 0;

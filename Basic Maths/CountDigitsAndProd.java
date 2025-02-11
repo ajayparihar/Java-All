@@ -10,7 +10,13 @@ public class CountDigitsAndProd {
         System.out.println(result);
     }
 
-    // Method to count the number of digits in N that evenly divide N
+    /**
+     * Counts the number of digits in N that evenly divide N
+     * @param N The number to check its digits
+     * @return Count of digits that evenly divide N
+     * Time Complexity: O(log N) where N is the input number, as we process each digit
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static int isEvenlyDivides(int N) {
         // Store the original number in a temporary variable
         int temp = N;

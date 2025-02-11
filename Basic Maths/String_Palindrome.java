@@ -4,6 +4,13 @@ public class String_Palindrome {
         System.out.println(isPalindrome(str));
     }
 
+    /**
+     * Checks if a string is palindrome after removing non-alphanumeric characters and converting to lowercase
+     * @param str The string to check
+     * @return true if the string is palindrome, false otherwise
+     * Time Complexity: O(n) where n is the length of the input string
+     * Space Complexity: O(n) for storing the filtered string
+     */
     static Boolean isPalindrome(String str) {
         String finalStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
 

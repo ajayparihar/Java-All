@@ -4,6 +4,13 @@ public class SquareRoot {
         System.out.println(squareRoot(x));
     }
 
+    /**
+     * Calculates the integer square root of a number using binary search
+     * @param x The number to find square root of
+     * @return The floor value of square root of x
+     * Time Complexity: O(log x) where x is the input number, as we use binary search
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static int squareRoot(int x) {
         if (x == 0 || x == 1)
             return x;
