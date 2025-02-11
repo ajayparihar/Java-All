@@ -7,7 +7,13 @@ public class ArmstrongNumber {
         System.out.println(isArmstrongNumber(num));
     }
 
-    // Method to check if a number is an Armstrong number
+    /**
+     * Checks if a number is an Armstrong number (sum of its digits raised to the power of number of digits equals the number)
+     * @param num The number to check
+     * @return true if the number is an Armstrong number, false otherwise
+     * Time Complexity: O(log n) where n is the input number, as we process each digit
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static boolean isArmstrongNumber(int num) {
         // Convert the number to a string and get its length to determine the number of
         // digits

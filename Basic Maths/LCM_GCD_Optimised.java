@@ -11,7 +11,14 @@ public class LCM_GCD_Optimised {
         System.out.println(String.format("%d %d", result[0], result[1]));
     }
 
-    // Method to calculate both LCM and GCD of two numbers
+    /**
+     * Calculates both LCM and GCD of two numbers
+     * @param A First number
+     * @param B Second number
+     * @return Array containing LCM at index 0 and GCD at index 1
+     * Time Complexity: O(log(min(A,B))) due to Euclidean algorithm
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static Long[] lcmAndGcd(Long A, Long B) {
         // If either A or B is zero, return LCM as 0 and GCD as the non-zero number
         if (A == 0 || B == 0) {
@@ -28,7 +35,14 @@ public class LCM_GCD_Optimised {
         return new Long[] { lcm, gcd };
     }
 
-    // Method to calculate the GCD using the Euclidean algorithm
+    /**
+     * Calculates the GCD using the Euclidean algorithm
+     * @param A First number
+     * @param B Second number
+     * @return GCD of A and B
+     * Time Complexity: O(log(min(A,B))) for Euclidean algorithm
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     static Long gcd(Long A, Long B) {
         // Iterate until B becomes 0
         while (B != 0) {
