@@ -1,5 +1,9 @@
 package String;
 
+/*
+ * TC: O(n) - single pass through the string where n is length of input string
+ * SC: O(n) - for StringBuilder to store compressed string in worst case
+ */
 public class StringCompression3 {
     public static void main(String[] args) {
         String word = "aaaaaaaaaaaaaabb";

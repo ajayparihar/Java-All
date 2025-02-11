@@ -1,5 +1,9 @@
 package String;
 
+/*
+ * TC: O(n) - single pass through the string comparing adjacent characters
+ * SC: O(1) - only uses a counter variable regardless of input size
+ */
 public class MinChangestoMakeBeautifulString {
     public static void main(String[] args) {
         String s = "1001";

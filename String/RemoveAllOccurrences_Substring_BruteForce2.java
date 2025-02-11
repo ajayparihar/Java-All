@@ -1,5 +1,9 @@
 package String;
 
+/*
+ * TC: O(n*m) where n = length of string, m = length of part
+ * SC: O(n) for StringBuilder
+ */
 public class RemoveAllOccurrences_Substring_BruteForce2 {
     public static void main(String[] args) {
         String s = "daabcbaabcbc";
@@ -20,5 +24,5 @@ public class RemoveAllOccurrences_Substring_BruteForce2 {
         
         // Return the modified string
         return sb.toString();
-}
+    }
 }

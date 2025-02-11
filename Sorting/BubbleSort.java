@@ -1,5 +1,9 @@
 package Sorting;
 
+/*
+ * TC: O(n^2) - nested loops for comparing and swapping elements
+ * SC: O(1) - only uses a constant amount of extra space for swapping
+ */
 public class BubbleSort {
     public static void main(String[] args) {
         int[] arr = { 4, 1, 3, 9, 7 };

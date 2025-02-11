@@ -1,5 +1,9 @@
 package String;
 
+/*
+ * TC: O(n*m) where n = length of string s, m = length of part
+ * SC: O(n) for StringBuilder to store the accumulated result
+ */
 public class RemoveAllOccurrences_Substring {
     public static void main(String[] args) {
         String s = "daabcbaabcbc";
