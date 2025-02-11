@@ -7,6 +7,13 @@ public class FancyString {
         System.out.println(makeFancyString(s));
     }
 
+    /**
+     * Makes a string fancy by removing characters that appear more than two times consecutively
+     * @param s The input string to make fancy
+     * @return The fancy string where no character appears more than two times consecutively
+     * Time Complexity: O(n) where n is the length of the input string
+     * Space Complexity: O(n) for storing the result in StringBuilder
+     */
     private static String makeFancyString(String s) {
         if (s == null || s.isEmpty()) {
             return "";

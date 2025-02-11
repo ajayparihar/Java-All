@@ -15,6 +15,8 @@ public class ClearDigits_Reverse {
      * This method removes the digits from the input string and reverses the remaining characters.
      * @param s The input string from which digits need to be removed and the remaining part reversed
      * @return A string with digits removed and the remaining characters reversed
+     * Time Complexity: O(n) where n is the length of the input string
+     * Space Complexity: O(n) for storing the non-digit characters in StringBuilder
      */
     private static String clearDigits(String s) {
         // StringBuilder to store the result of non-digit characters

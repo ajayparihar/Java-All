@@ -23,7 +23,12 @@ class Node {
 class LinkedList {
     Node head; // The head of the list
 
-    // Method to add a new node at the end of the list
+    /**
+     * Adds a new node with the given data at the end of the linked list
+     * @param data The data to be added to the list
+     * Time Complexity: O(n) where n is the length of the list, as we need to traverse to the end
+     * Space Complexity: O(1) as we only create one new node
+     */
     public void add(int data) {
         Node newNode = new Node(data); // Create a new node with the given data
         if (head == null) {

@@ -7,6 +7,13 @@ public class CircularSentence {
         System.out.println(isCircularSentence(sentence));
     }
 
+    /**
+     * Checks if a sentence is circular (last char of each word matches first char of next word, and last char matches first char)
+     * @param sentence The input sentence to check
+     * @return true if the sentence is circular, false otherwise
+     * Time Complexity: O(n) where n is the length of the input sentence
+     * Space Complexity: O(1) as we only use constant extra space
+     */
     public static boolean isCircularSentence(String sentence) {
         int length = sentence.length();
 

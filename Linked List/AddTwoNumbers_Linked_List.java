@@ -17,6 +17,14 @@ public class AddTwoNumbers_Linked_List {
         LinkedListHelper.printList(result);
     }
 
+    /**
+     * Adds two numbers represented by linked lists, where each node contains a single digit
+     * @param l1 First number represented as a linked list
+     * @param l2 Second number represented as a linked list
+     * @return Sum of the two numbers as a linked list
+     * Time Complexity: O(max(n,m)) where n and m are lengths of input lists
+     * Space Complexity: O(max(n,m)) for storing the result linked list
+     */
     public static LinkedListHelper.ListNode addTwoNumbers(LinkedListHelper.ListNode l1, LinkedListHelper.ListNode l2) {
         LinkedListHelper.ListNode dummyHead = new LinkedListHelper.ListNode(0); // Dummy node to simplify result list handling
         LinkedListHelper.ListNode current = dummyHead; // Current pointer for result list
